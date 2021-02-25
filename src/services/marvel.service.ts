@@ -11,7 +11,7 @@ export class MarvelService {
 
     }
 
-    getCaracters(page : number = 1){
+    getCaracters(page : number = 0){
         let url = "http://gateway.marvel.com/v1/public/characters";
         let publicKey = "d82f87f1344cc3f08b5ca4bd77e86528";
         let privateKey = "50a39761a53ade28dc871e50c298531ab02ea2ca";
@@ -20,7 +20,8 @@ export class MarvelService {
         let params = new HttpParams()
         .set('ts', '1')
         .set('apikey', publicKey)
-        .set('hash', hash); 
+        .set('hash', hash)
+        .set('offset', (page*20).toString()); 
 
         return this.http.get(url,{
             params: params
