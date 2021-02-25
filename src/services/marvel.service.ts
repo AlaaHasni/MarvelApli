@@ -11,7 +11,7 @@ export class MarvelService {
 
     }
 
-    getCaracters(){
+    getCaracters(page : number = 1){
         let url = "http://gateway.marvel.com/v1/public/characters";
         let publicKey = "d82f87f1344cc3f08b5ca4bd77e86528";
         let privateKey = "50a39761a53ade28dc871e50c298531ab02ea2ca";

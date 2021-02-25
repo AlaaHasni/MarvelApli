@@ -1,1 +1,12 @@
-aaaaaa
+<div class="container">
+    <div class="row" >
+        <div class="col-md-4" *ngFor="let hero of caracters"> 
+            <div class="card ml-20" style="width: 18rem;" >
+                <img class="card-img-top" src="{{hero.thumbnail.path + '.' +  hero.thumbnail.extension }}" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title"> {{ hero.name }}</h5>
+                </div>
+            </div>
+            </div>
+        </div>
+</div>
